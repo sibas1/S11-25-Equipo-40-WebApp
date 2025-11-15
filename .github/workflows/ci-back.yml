@@ -3,8 +3,12 @@ name: CI Pipeline
 on:
   push:
     branches: ["**"]
+    paths:
+      - "Backend/**"
   pull_request:
     branches: ["**"]
+    paths:
+      - "Backend/**"
 
 concurrency:
   group: ci-pipeline-${{ github.ref }}
